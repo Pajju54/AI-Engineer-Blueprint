@@ -1,0 +1,3 @@
+Day1 - "I built a CLI-driven, config-based data loader where everything from file paths to cleaning logic was abstracted away. This made the pipeline scalable, reusable, and automation-ready."
+
+
