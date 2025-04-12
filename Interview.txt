@@ -1,0 +1,16 @@
+Day1 -
+ "I built a CLI-driven, config-based data loader where everything from file paths to cleaning logic was abstracted away. This made the pipeline scalable, reusable, and automation-ready."
+
+Day2 -
+Questions to Ask When Reading EDA
+Are any columns just noise or empty?
+
+Which features might be strong predictors?
+
+Are there outliers? Skewed data?
+
+What’s missing and how do I fill it?
+
+Any multicollinearity issues?
+
+What do the top X vs. Y interactions tell me?

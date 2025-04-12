@@ -1,14 +1,20 @@
 import typer
 from rich.console import Console
 from rich.table import Table
-from load import read_config, load_data, clean_data
+from load import read_config, load_data , clean_data
+from eda_report import generate_profile_report
+from features.pipeline import build_preprocessing_pipeline
+import pandas as pd
 import os
+
+raw = 'raw'
+cleaned = 'cleaned'
 
 app = typer.Typer()
 console = Console()
 
 @app.command()
-def load_clean(preview: bool = True, save: bool = False, output_path: str = "cleaned_train.csv"):
+def load_clean(preview: bool = True, save: bool = False, output_path: str = "data/cleaned/cleaned_train.csv"):
     """
     Load and clean the dataset as per config.yaml.
     
@@ -19,7 +25,7 @@ def load_clean(preview: bool = True, save: bool = False, output_path: str = "cle
     """
 
     config = read_config()
-    df = load_data(config)
+    df = load_data(config, raw)
     cleaned_df = clean_data(df,config)
 
     if preview:
@@ -46,11 +52,53 @@ def train():
     console.print("[bold blue] Model training coming in Day 3. Saty tuned!")
 
 @app.command()
-def profile():
+def profile(
+    source_path:str = typer.Option("cleaned", help="Which dataset to profile: raw or cleaned"),
+    output_path: str = typer.Option("reports/eda/profile_report.html", help="Path to store the profile report")
+):
     """
-    Generate automated data profiling report (Coming Soon)
+    Generate a automated EDA report (HTML) from raw or cleaned dataset
     """
-    console.print("[bold blue] Data profiling coming soon. Stay tuned!")
+    config = read_config()
+    df = load_data(config, source_path)
+
+    generate_profile_report(df, output_path)
+    console.print(f"[bold green] Profile report saved to {output_path}")
+
+
+@app.command()
+def preprocess(
+    source_path:str = typer.Option("cleaned", help="Which dataset to preprocess: raw or cleaned"),
+    save: bool = typer.Option(False, help="Weather to save the preprocessed output as CSV"),
+    output_path: str = typer.Option("data/preprocessed/preprocessed_train.csv", help="Path to store the Preprocessed CSV file")
+):
+    """
+    Preprocess the dataset using the pipeline defined in features.py.
+    """
+    config = read_config()
+
+    # Assuming build_preprocessing_pipeline() is a function that returns a preprocessing pipeline
+    console.print(f"[bold yellow] Loading the data from: [/bold yellow]{source_path}")
+    df = load_data(config, source_path)
+
+    #drop irrelevent cols
+    drop_cols = ['Name', 'Ticket', 'Cabin', 'PassengerId']
+    df = df.drop(columns=drop_cols, errors='ignore')
+
+    #split features and target
+    X = df.drop(columns=['Survived'], errors='ignore')
+    y = df['Survived']
+
+    #build and apply preprocessing
+    pipeline = build_preprocessing_pipeline()
+    X_transformed = pipeline.fit_transform(X)
+
+    console.print("[bold green] Preprocessing complete! [/bold green]")
+    console.print(f" Transformed  shape: {X_transformed.shape}")
+
+    if save:
+        pd.DataFrame(X_transformed).to_csv(output_path, index=False)
+        console.print(f"[bold blue] Saved preprocessed data to: [/bold blue] {output_path}")
 
 
 if __name__ == "__main__":

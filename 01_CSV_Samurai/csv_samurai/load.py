@@ -1,8 +1,7 @@
 import pandas as pd
 import yaml
-from logger import get_logger
+from logger import logger
 
-logger = get_logger("loader")
 
 def read_config(path="csv_samurai/config.yaml") -> dict:
     with open(path,'r') as f:
@@ -10,14 +9,40 @@ def read_config(path="csv_samurai/config.yaml") -> dict:
     logger.info("Config loaded.")
     return config
 
-def load_data(config: dict) ->pd.DataFrame:
+def load_data(config: dict,source_path: str) -> pd.DataFrame:
     try:
-        df = pd.read_csv(config["data_path"])
-        logger.info(f"Loaded data from {config['data_path']} with shape {df.shape}")
-        return df
+        if source_path == "raw":
+            df = pd.read_csv(config["data"]["raw_path"])
+            logger.info(f"Loaded raw data from {config['data']['raw_path']} with shape {df.shape}")
+            return df
+        elif source_path == "cleaned":
+            df = pd.read_csv(config["data"]["cleaned_path"])
+            logger.info(f"Loaded the cleaned data from {config['data']['cleaned_path']} with shape {df.shape}")
+            return df
+        else:
+            logger.info("Invalid source. Choose 'raw' or 'cleaned'.")
+
     except Exception as e:
         logger.error(f"Error loading the data: {e}")
         raise
+
+# def load_raw_data(config: dict) ->pd.DataFrame:
+#     try:
+#         df = pd.read_csv(config["data"]["raw_path"])
+#         logger.info(f"Loaded raw data from {config['data']['raw_path']} with shape {df.shape}")
+#         return df
+#     except Exception as e:
+#         logger.error(f"Error loading the data: {e}")
+#         raise
+
+# def load_cleaned_data(config: dict) -> pd.DataFrame:
+#     try:
+#         df = pd.read_csv(config["data"]["cleaned_path"])
+#         logger.info(f"Loaded the cleaned data from {config['data']['cleaned_path']} with shape {df.shape}")
+#         return df
+#     except Exception as e:
+#         logger.error(f"Error loading the cleaned data: {e}")
+#         raise
 
 def clean_data(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     logger.info("Starting the data cleaning process...")
