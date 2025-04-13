@@ -69,3 +69,7 @@ outputs/
 *.swp
 *.tmp
 *.old
+
+#Extra files to ignore
+.\Interview.txt
+.\01_CSV_Samurai.zip

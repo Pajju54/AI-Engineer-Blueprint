@@ -4,6 +4,9 @@ from rich.table import Table
 from load import read_config, load_data , clean_data
 from eda_report import generate_profile_report
 from features.pipeline import build_preprocessing_pipeline
+from model.model import train_and_evaluate
+from load import read_config, load_data, clean_data
+from logger import get_logger
 import pandas as pd
 import os
 
@@ -45,11 +48,31 @@ def load_clean(preview: bool = True, save: bool = False, output_path: str = "dat
     console.print("[bold green] All done! Your data is cleaner than a samurai's sword!")
 
 @app.command()
-def train():
+def train(
+    source_path: str = typer.Option("cleaned", help="Which dataset to train on: raw or cleaned"),
+    target_column: str = typer.Option("Survived", help="Target column to predict"),
+):
     """
-    Train your mL models
+    Train your ML model using cleaned dataset and preprocessing ppipeline
     """
-    console.print("[bold blue] Model training coming in Day 3. Saty tuned!")
+    console.print("[bold blue] Model Training Begins...")
+
+    config = read_config()
+    df = load_data(config, source_path)
+
+    drop_cols = ['Name', 'Ticket', 'Cabin', 'PassengerId']
+    df = df.drop(columns=drop_cols, errors='ignore')
+
+    metrics = train_and_evaluate(df, target_column)
+
+    console.print("\n[bold green] Validation Metrics:")
+    for k, v in metrics.items():
+        if k != "confusion_matrix":
+            console.print(f"[yellow]{k}[/yellow]: {v:.4f}")
+    
+    console.print("[bold cyan] Model training completed!")
+
+
 
 @app.command()
 def profile(
