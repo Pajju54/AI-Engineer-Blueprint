@@ -1,0 +1,346 @@
+[[10:17:51]] | Config loaded.
+[[10:17:51]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[10:17:51]] | Starting the data cleaning process...
+[[10:17:51]] | Null values before cleaning:
+PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Sex              0
+Age            177
+SibSp            0
+Parch            0
+Ticket           0
+Fare             0
+Cabin          687
+Embarked         2
+dtype: int64
+[[10:17:51]] | Dropped 0 duplicate rows.
+[[10:17:51]] | Filled the missing 'Age' with median
+[[10:17:51]] | Filled the missing 'Embarked' with mode
+[[10:17:51]] | Dropped 'Cabin' column
+[[10:17:51]] | Nulls after cleaning:
+PassengerId    0
+Survived       0
+Pclass         0
+Name           0
+Sex            0
+Age            0
+SibSp          0
+Parch          0
+Ticket         0
+Fare           0
+Embarked       0
+dtype: int64
+[[10:17:51]] | Data cleaning process completed
+[[10:18:13]] | Config loaded.
+[[10:18:13]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[10:18:13]] | Generating data profile report...
+[[10:18:21]] | Profile report saved to profile_report.html
+[[10:36:53]] | Config loaded.
+[[10:36:53]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[10:36:53]] | Generating data profile report...
+[[10:37:04]] | Profile report saved to reports/eda/profile_report.html
+[[10:37:17]] | Config loaded.
+[[10:37:17]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[10:37:17]] | Generating data profile report...
+[[10:37:25]] | Profile report saved to reports/eda/profile_report.html
+[[10:40:02]] | Config loaded.
+[[10:40:02]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[10:40:02]] | Generating data profile report...
+[[10:40:12]] | Profile report saved to .\reports\eda\cleaned_csv_report.html
+[[10:40:36]] | Config loaded.
+[[10:40:36]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[10:40:36]] | Generating data profile report...
+[[10:40:47]] | Profile report saved to .\reports\eda\raw_csv_report.html
+[[01:10:34]] | Config loaded.
+[[01:10:34]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[01:10:34]] | Generating data profile report...
+[[01:11:58]] | Config loaded.
+[[01:11:58]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[01:11:58]] | Generating data profile report...
+[[01:13:23]] | Config loaded.
+[[01:13:23]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[01:13:23]] | Generating data profile report...
+[[16:27:54]] | Config loaded.
+[[16:28:03]] | Config loaded.
+[[16:29:19]] | Config loaded.
+[[16:29:19]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:30:06]] | Config loaded.
+[[16:30:06]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:31:00]] | Config loaded.
+[[16:31:00]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:31:19]] | Config loaded.
+[[16:31:19]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:31:51]] | Config loaded.
+[[16:31:51]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:35:30]] | Config loaded.
+[[16:35:30]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:39:47]] | Config loaded.
+[[16:39:47]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:40:12]] | Config loaded.
+[[16:40:12]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:42:25]] | Config loaded.
+[[16:42:25]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:43:04]] | Config loaded.
+[[16:43:04]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:44:19]] | Config loaded.
+[[16:44:19]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:44:50]] | Config loaded.
+[[16:44:50]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:44:59]] | Config loaded.
+[[16:44:59]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:46:49]] | Config loaded.
+[[16:46:49]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:51:14]] | Config loaded.
+[[16:51:14]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:52:18]] | Config loaded.
+[[16:52:18]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:54:32]] | Config loaded.
+[[16:54:32]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[16:58:33]] | Config loaded.
+[[16:58:33]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[18:11:02]] | Config loaded.
+[[18:11:02]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[18:11:02]] | Starting the data cleaning process...
+[[18:11:02]] | Null values before cleaning:
+PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Sex              0
+Age            177
+SibSp            0
+Parch            0
+Ticket           0
+Fare             0
+Cabin          687
+Embarked         2
+dtype: int64
+[[18:11:02]] | Dropped 0 duplicate rows.
+[[18:11:02]] | Filled the missing 'Age' with median
+[[18:11:02]] | Filled the missing 'Embarked' with mode
+[[18:11:02]] | Dropped 'Cabin' column
+[[18:11:02]] | Nulls after cleaning:
+PassengerId    0
+Survived       0
+Pclass         0
+Name           0
+Sex            0
+Age            0
+SibSp          0
+Parch          0
+Ticket         0
+Fare           0
+Embarked       0
+dtype: int64
+[[18:11:02]] | Data cleaning process completed
+[[18:19:11]] | Config loaded.
+[[18:19:11]] | Loaded raw data from data/train.csv with shape (891, 12)
+[[18:19:11]] | Generating data profile report...
+[[18:19:19]] | Profile report saved to reports/eda/profile_report.html
+[[18:20:05]] | Config loaded.
+[[18:20:05]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[18:25:05]] | Config loaded.
+[[18:25:05]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:34:32]] | Config loaded.
+[[15:34:32]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:34:32]] | Config loaded.
+[[15:34:32]] | Splitting dataset into train and validation
+[[15:35:28]] | Config loaded.
+[[15:35:28]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:35:28]] | Config loaded.
+[[15:35:28]] | Splitting dataset into train and validation
+[[15:36:12]] | Config loaded.
+[[15:36:12]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:36:12]] | Config loaded.
+[[15:36:12]] | Splitting dataset into train and validation
+[[15:36:31]] | Config loaded.
+[[15:36:31]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:36:31]] | Config loaded.
+[[15:36:31]] | Splitting dataset into train and validation
+[[15:36:47]] | Config loaded.
+[[15:36:47]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:36:47]] | Config loaded.
+[[15:36:47]] | Splitting dataset into train and validation
+[[15:36:47]] | Bulding preprocessing pipeline...
+[[15:36:47]] | Creating full pipeline with the model...
+[[15:36:47]] | Training the model...
+[[15:36:48]] | Evaluating model on Validation data...
+[[15:36:48]] | Evaluating the model performance on validation set...
+[[15:36:48]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:37:47]] | Config loaded.
+[[15:37:47]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:37:47]] | Config loaded.
+[[15:37:47]] | Splitting dataset into train and validation
+[[15:37:47]] | Bulding preprocessing pipeline...
+[[15:37:47]] | Creating full pipeline with the model...
+[[15:37:47]] | Training the model...
+[[15:37:47]] | Evaluating model on Validation data...
+[[15:37:47]] | Evaluating the model performance on validation set...
+[[15:37:47]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:38:53]] | Config loaded.
+[[15:38:53]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:38:53]] | Config loaded.
+[[15:38:53]] | Splitting dataset into train and validation
+[[15:38:53]] | Bulding preprocessing pipeline...
+[[15:38:53]] | Creating full pipeline with the model...
+[[15:38:53]] | Training the model...
+[[15:38:54]] | Evaluating model on Validation data...
+[[15:38:54]] | Evaluating the model performance on validation set...
+[[15:38:54]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:40:11]] | Config loaded.
+[[15:40:11]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:40:11]] | Config loaded.
+[[15:40:11]] | Splitting dataset into train and validation
+[[15:40:11]] | Bulding preprocessing pipeline...
+[[15:40:11]] | Creating full pipeline with the model...
+[[15:40:11]] | Training the model...
+[[15:40:11]] | Evaluating model on Validation data...
+[[15:40:11]] | Evaluating the model performance on validation set...
+[[15:40:11]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:42:12]] | Config loaded.
+[[15:42:12]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:42:12]] | Config loaded.
+[[15:42:12]] | Splitting dataset into train and validation
+[[15:42:12]] | Bulding preprocessing pipeline...
+[[15:42:12]] | Creating full pipeline with the model...
+[[15:42:12]] | Training the model...
+[[15:42:12]] | Evaluating model on Validation data...
+[[15:42:12]] | Evaluating the model performance on validation set...
+[[15:42:12]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:42:36]] | Config loaded.
+[[15:42:36]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:42:36]] | Config loaded.
+[[15:42:36]] | Splitting dataset into train and validation
+[[15:42:36]] | Bulding preprocessing pipeline...
+[[15:42:36]] | Creating full pipeline with the model...
+[[15:42:36]] | Training the model...
+[[15:42:36]] | Evaluating model on Validation data...
+[[15:42:36]] | Evaluating the model performance on validation set...
+[[15:42:36]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:42:37]] | Confusion matrix plot saved to csv_samurai/artifacts\confusion_matrix.png
+[[15:42:37]] | Evaluation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[15:42:37]] | Validation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[15:43:58]] | Config loaded.
+[[15:43:58]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:43:58]] | Config loaded.
+[[15:43:58]] | Splitting dataset into train and validation
+[[15:43:58]] | Bulding preprocessing pipeline...
+[[15:43:58]] | Creating full pipeline with the model...
+[[15:43:58]] | Training the model...
+[[15:43:58]] | Evaluating model on Validation data...
+[[15:43:58]] | Evaluating the model performance on validation set...
+[[15:43:58]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:43:59]] | Confusion matrix plot saved to csv_samurai/artifacts\confusion_matrix.png
+[[15:43:59]] | Evaluation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[15:43:59]] | Validation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[15:43:59]] | Model saved to csv_samurai/artifacts/model.joblib
+[[15:44:48]] | Config loaded.
+[[15:44:48]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[15:44:48]] | Config loaded.
+[[15:44:48]] | Splitting dataset into train and validation
+[[15:44:48]] | Bulding preprocessing pipeline...
+[[15:44:48]] | Creating full pipeline with the model...
+[[15:44:48]] | Training the model...
+[[15:44:48]] | Evaluating model on Validation data...
+[[15:44:48]] | Evaluating the model performance on validation set...
+[[15:44:48]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[15:44:50]] | Confusion matrix plot saved to csv_samurai/artifacts\confusion_matrix.png
+[[15:44:50]] | Validation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[15:44:50]] | Model saved to csv_samurai/artifacts/model.joblib
+[[16:00:20]] | Config loaded.
+[[16:00:20]] | Loaded the cleaned data from data/cleaned/cleaned_train.csv with shape (891, 11)
+[[16:00:20]] | Config loaded.
+[[16:00:20]] | Splitting dataset into train and validation
+[[16:00:20]] | Bulding preprocessing pipeline...
+[[16:00:20]] | Creating full pipeline with the model...
+[[16:00:20]] | Training the model...
+[[16:00:20]] | Evaluating model on Validation data...
+[[16:00:20]] | Evaluating the model performance on validation set...
+[[16:00:20]] | Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.95      0.86       110
+           1       0.87      0.59      0.71        69
+
+    accuracy                           0.81       179
+   macro avg       0.83      0.77      0.78       179
+weighted avg       0.82      0.81      0.80       179
+
+[[16:00:21]] | Confusion matrix plot saved to csv_samurai/artifacts\confusion_matrix.png
+[[16:00:21]] | Validation metrics: {'accuracy': 0.8100558659217877, 'precision': 0.8723404255319149, 'recall': 0.5942028985507246, 'f1_score': 0.7068965517241379, 'confusion_matrix': [[104, 6], [28, 41]]}
+[[16:00:21]] | Metrics saved to csv_samurai/artifacts/metrics.json
+[[16:00:21]] | Model saved to csv_samurai/artifacts/model.joblib

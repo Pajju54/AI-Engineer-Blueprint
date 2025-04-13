@@ -1,0 +1,30 @@
+data:
+  raw_path : "data/train.csv"
+  cleaned_path : "data/cleaned/cleaned_train.csv"
+required_columns:
+  - PassengerId 
+  - Survived 
+  - Pclass
+  - Name
+  - Sex
+  - Age
+  - SibSp
+  - Parch
+  - Ticket
+  - Fare
+  - Cabin
+  - Embarked
+
+model:
+  val_split: 0.2
+  random_state: 42
+  n_estimators: 100
+  max_depth: 5
+
+artifacts:
+  model_path: "csv_samurai/artifacts/model.joblib"
+  metrics_path: "csv_samurai/artifacts/metrics.json"
+
+drop_duplicates : true
+dropna : false
+log_lvel : "info"
